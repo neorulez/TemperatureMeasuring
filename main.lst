@@ -1,0 +1,70 @@
+   1               		.file	"main.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+   8               		.global __do_copy_data
+   9               		.global __do_clear_bss
+  17               	.Ltext0:
+  18               	.global	main
+  20               	main:
+  21               	.LFB6:
+  22               	.LM1:
+  23               	/* prologue: function */
+  24               	/* frame size = 0 */
+  25               	.LBB4:
+  26               	.LBB5:
+  27               	.LM2:
+  28 0000 84E3      		ldi r24,lo8(52)
+  29 0002 87BB      		out 55-32,r24
+  30               	.L2:
+  31 0004 00C0      		rjmp .L2
+  32               	.LBE5:
+  33               	.LBE4:
+  34               	.LFE6:
+  36               	.global	init_tiny
+  38               	init_tiny:
+  39               	.LFB7:
+  40               	.LM3:
+  41               	/* prologue: function */
+  42               	/* frame size = 0 */
+  43               	.LM4:
+  44 0006 84E3      		ldi r24,lo8(52)
+  45 0008 87BB      		out 55-32,r24
+  46               	/* epilogue start */
+  47               	.LM5:
+  48 000a 0895      		ret
+  49               	.LFE7:
+  51               	.global	result1
+  52               	.global	result1
+  53               		.section .bss
+  56               	result1:
+  57 0000 0000      		.skip 2,0
+  58               	.global	result2
+  59               	.global	result2
+  62               	result2:
+  63 0002 0000      		.skip 2,0
+  64               	.global	diff
+  65               	.global	diff
+  68               	diff:
+  69 0004 0000      		.skip 2,0
+ 102               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+     /tmp/ccMAHvWI.s:2      *ABS*:0000003f __SREG__
+     /tmp/ccMAHvWI.s:3      *ABS*:0000003e __SP_H__
+     /tmp/ccMAHvWI.s:4      *ABS*:0000003d __SP_L__
+     /tmp/ccMAHvWI.s:5      *ABS*:00000034 __CCP__
+     /tmp/ccMAHvWI.s:6      *ABS*:00000000 __tmp_reg__
+     /tmp/ccMAHvWI.s:7      *ABS*:00000001 __zero_reg__
+     /tmp/ccMAHvWI.s:20     .text:00000000 main
+     /tmp/ccMAHvWI.s:38     .text:00000006 init_tiny
+     /tmp/ccMAHvWI.s:56     .bss:00000000 result1
+     /tmp/ccMAHvWI.s:62     .bss:00000002 result2
+     /tmp/ccMAHvWI.s:68     .bss:00000004 diff
+
+UNDEFINED SYMBOLS
+__do_copy_data
+__do_clear_bss
