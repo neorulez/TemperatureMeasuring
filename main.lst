@@ -14,56 +14,115 @@
   22               	.LM1:
   23               	/* prologue: function */
   24               	/* frame size = 0 */
-  25               	.LBB4:
-  26               	.LBB5:
+  25               	.LBB20:
+  26               	.LBB21:
   27               	.LM2:
   28 0000 84E3      		ldi r24,lo8(52)
   29 0002 87BB      		out 55-32,r24
-  30               	.L2:
-  31 0004 00C0      		rjmp .L2
-  32               	.LBE5:
-  33               	.LBE4:
-  34               	.LFE6:
-  36               	.global	init_tiny
-  38               	init_tiny:
-  39               	.LFB7:
-  40               	.LM3:
-  41               	/* prologue: function */
-  42               	/* frame size = 0 */
-  43               	.LM4:
-  44 0006 84E3      		ldi r24,lo8(52)
-  45 0008 87BB      		out 55-32,r24
-  46               	/* epilogue start */
-  47               	.LM5:
-  48 000a 0895      		ret
-  49               	.LFE7:
-  51               	.global	result1
-  52               	.global	result1
-  53               		.section .bss
-  56               	result1:
-  57 0000 0000      		.skip 2,0
-  58               	.global	result2
-  59               	.global	result2
-  62               	result2:
-  63 0002 0000      		.skip 2,0
-  64               	.global	diff
-  65               	.global	diff
-  68               	diff:
-  69 0004 0000      		.skip 2,0
- 102               	.Letext0:
+  30               	.LBE21:
+  31               	.LBE20:
+  32               	.LM3:
+  33 0004 8AE0      		ldi r24,lo8(10)
+  34 0006 8093 0000 		sts x,r24
+  35               	.LBB22:
+  36               	.LBB23:
+  37               	.LBB24:
+  38               	.LBB25:
+  39               	.LM4:
+  40 000a 20EE      		ldi r18,lo8(12000)
+  41 000c 3EE2      		ldi r19,hi8(12000)
+  42               	.LBE25:
+  43               	.LBE24:
+  44               	.LBE23:
+  45               	.LBE22:
+  46               	.LM5:
+  47 000e 40E1      		ldi r20,lo8(16)
+  48               	.L2:
+  49               	.LM6:
+  50 0010 18BA      		out 56-32,__zero_reg__
+  51               	.LBB29:
+  52               	.LBB28:
+  53               	.LBB27:
+  54               	.LBB26:
+  55               	.LM7:
+  56 0012 C901      		movw r24,r18
+  57               	.LVL0:
+  58               	/* #APP */
+  59               	 ;  105 "/usr/lib/gcc/avr/4.3.3/../../../avr/include/util/delay_basic.h" 1
+  60 0014 0197      		1: sbiw r24,1
+  61 0016 01F4      		brne 1b
+  62               	 ;  0 "" 2
+  63               	/* #NOAPP */
+  64               	.LBE26:
+  65               	.LBE27:
+  66               	.LBE28:
+  67               	.LBE29:
+  68               	.LM8:
+  69 0018 48BB      		out 56-32,r20
+  70               	.LBB30:
+  71               	.LBB31:
+  72               	.LBB32:
+  73               	.LBB33:
+  74               	.LM9:
+  75 001a C901      		movw r24,r18
+  76               	.LVL1:
+  77               	/* #APP */
+  78               	 ;  105 "/usr/lib/gcc/avr/4.3.3/../../../avr/include/util/delay_basic.h" 1
+  79 001c 0197      		1: sbiw r24,1
+  80 001e 01F4      		brne 1b
+  81               	 ;  0 "" 2
+  82               	/* #NOAPP */
+  83 0020 00C0      		rjmp .L2
+  84               	.LBE33:
+  85               	.LBE32:
+  86               	.LBE31:
+  87               	.LBE30:
+  88               	.LFE6:
+  90               	.global	init_tiny
+  92               	init_tiny:
+  93               	.LFB7:
+  94               	.LM10:
+  95               	/* prologue: function */
+  96               	/* frame size = 0 */
+  97               	.LM11:
+  98 0022 84E3      		ldi r24,lo8(52)
+  99 0024 87BB      		out 55-32,r24
+ 100               	/* epilogue start */
+ 101               	.LM12:
+ 102 0026 0895      		ret
+ 103               	.LFE7:
+ 105               	.global	result1
+ 106               	.global	result1
+ 107               		.section .bss
+ 110               	result1:
+ 111 0000 0000      		.skip 2,0
+ 112               	.global	result2
+ 113               	.global	result2
+ 116               	result2:
+ 117 0002 0000      		.skip 2,0
+ 118               	.global	diff
+ 119               	.global	diff
+ 122               	diff:
+ 123 0004 0000      		.skip 2,0
+ 124               	.global	x
+ 125               	.global	x
+ 128               	x:
+ 129 0006 00        		.skip 1,0
+ 162               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-     /tmp/ccMAHvWI.s:2      *ABS*:0000003f __SREG__
-     /tmp/ccMAHvWI.s:3      *ABS*:0000003e __SP_H__
-     /tmp/ccMAHvWI.s:4      *ABS*:0000003d __SP_L__
-     /tmp/ccMAHvWI.s:5      *ABS*:00000034 __CCP__
-     /tmp/ccMAHvWI.s:6      *ABS*:00000000 __tmp_reg__
-     /tmp/ccMAHvWI.s:7      *ABS*:00000001 __zero_reg__
-     /tmp/ccMAHvWI.s:20     .text:00000000 main
-     /tmp/ccMAHvWI.s:38     .text:00000006 init_tiny
-     /tmp/ccMAHvWI.s:56     .bss:00000000 result1
-     /tmp/ccMAHvWI.s:62     .bss:00000002 result2
-     /tmp/ccMAHvWI.s:68     .bss:00000004 diff
+     /tmp/ccdMj0e8.s:2      *ABS*:0000003f __SREG__
+     /tmp/ccdMj0e8.s:3      *ABS*:0000003e __SP_H__
+     /tmp/ccdMj0e8.s:4      *ABS*:0000003d __SP_L__
+     /tmp/ccdMj0e8.s:5      *ABS*:00000034 __CCP__
+     /tmp/ccdMj0e8.s:6      *ABS*:00000000 __tmp_reg__
+     /tmp/ccdMj0e8.s:7      *ABS*:00000001 __zero_reg__
+     /tmp/ccdMj0e8.s:20     .text:00000000 main
+     /tmp/ccdMj0e8.s:128    .bss:00000006 x
+     /tmp/ccdMj0e8.s:92     .text:00000022 init_tiny
+     /tmp/ccdMj0e8.s:110    .bss:00000000 result1
+     /tmp/ccdMj0e8.s:116    .bss:00000002 result2
+     /tmp/ccdMj0e8.s:122    .bss:00000004 diff
 
 UNDEFINED SYMBOLS
 __do_copy_data
